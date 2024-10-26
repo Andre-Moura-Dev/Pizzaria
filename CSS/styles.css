@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+   background-color: orange;
+   border-radius: 5px;
+   width: 100%;
+   height: 80px;
+   /* margin: 10px 300px; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: white; 
+}
+
+.header-col {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-col-button {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+    height: 800px;
+}
+
+.side-bar {
+    background-color: lightgray;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 20vw;
+    height: 100%;
+}
+
+.side-bar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0; /* Este padding foi utilizado para centralizar o ul */
+}
+
+.side-bar ul li {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.side-bar a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    width: 80vw;
+    height: 100%;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 50px;
+    margin-top: auto;
+    text-align: center;
+}
+
+button {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.7;
+}
