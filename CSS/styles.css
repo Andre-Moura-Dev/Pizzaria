@@ -41,7 +41,16 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+}
+
+.header-col-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-col-button a:hover {
+    background-color: orange;
 }
 
 main {
@@ -60,8 +69,14 @@ main {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 20vw;
+    width: 0; /* Inicia com largura 0 */
+    overflow: hidden; /* Esconde o conteúdo que excede a largura */
     height: 100%;
+    transition: width 0.5s ease; /* Transição suave */
+}
+
+.side-bar.open {
+    width: 20vw; /* Largura total quando aberta */
 }
 
 .side-bar ul {
@@ -72,7 +87,7 @@ main {
     text-align: center;
     flex-direction: column;
     width: 100%;
-    padding: 0; /* Este padding foi utilizado para centralizar o ul */
+    padding: 0;
 }
 
 .side-bar ul li {
@@ -82,7 +97,7 @@ main {
 
 .side-bar a {
     text-decoration: none;
-    color: black;
+    color: white;
     margin: 0 15px;
     font-size: 1.1em;
     border: none;
@@ -100,15 +115,26 @@ main {
 }
 
 footer {
-    background-color: #000;
+    background-color: gray;
     color: white;
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: auto;
     height: 50px;
     margin-top: auto;
     text-align: center;
+}
+
+footer .theme button {
+    background-color: orange; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    padding: 0.5rem 1rem; /* Espaçamento interno do botão */
+    font-size: 17px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
 }
 
 button {
@@ -123,4 +149,20 @@ button {
 
 button:hover {
     opacity: 0.7;
+}
+
+body.dark {
+    background-color: #333;
+}
+
+.side-bar.dark {
+    background-color: #444;
+}
+
+header.dark {
+    background-color: #555;
+}
+
+footer.dark {
+    background-color: #222;
 }
