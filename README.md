@@ -3,14 +3,13 @@
 Site de pedidos de pizzas
 
 
-20% deste site está concluído, adicionei funções para tratar erros de login,
-mudar tema da página, abrir e fechar a barra de navegação e futuramente,
-terá outras funções específicas para cada arquivo .js existente na Pasta JS.
+28% deste site está concluído, adicionei funções para tratar erros de login,
+mudar tema da página, abrir e fechar a barra de navegação, criei um javascript para validação de cadastro de usuários, no arquvio tipos_pizza.js terá uma função para que quando clicar na imagem apareça uma imagem da pizza com seus ingredientes e fururamente outras funções específicas serão adicionadas para cada arquivo .js existente na Pasta JS.
 
 Desenvolvi Parte deste site utilizando:
 
--> HTML5
--> CSS3
-->JAVASCRIPT
+-> HTML5 <br>
+-> CSS3 <br>
+-> JAVASCRIPT <br>
 
--> BOTSTRAP(futuramente)
+-> BOTSTRAP(página de cadastro de clientes)
