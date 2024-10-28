@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var password = document.getElementById('password').value;
 
         //Se login e senha está certo, é direcionado para index.html
-        if(username == 'admin' && password == '4710' || username == 'user_name@gmail.com' && password == '9820') {
+        if(username == 'admin' && password == '4710') {
             alert("Bem vindo Administrador do site.");
             location.href = ('/index.html');
         } 
