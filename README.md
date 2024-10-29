@@ -14,3 +14,4 @@ Desenvolvi parte deste site utilizando:
 
 -> BOTSTRAP(página de cadastro de clientes)
 
+-> Desevolvido por (André de Oliveira)
