@@ -1,0 +1,17 @@
+.pizzas {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    height: 100vh;
+}
+
+img {
+    width: 400px;
+    height: 300px;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+}
