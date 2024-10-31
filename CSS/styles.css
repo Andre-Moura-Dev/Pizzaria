@@ -7,9 +7,9 @@ body {
 .container {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
 
