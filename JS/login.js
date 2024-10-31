@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('login-form').addEventListener('submit', function(event) {
         
-        event.preventDefault(); //Não ativa o login caso os campos não estejam preenchidos
+        event.preventDefault(); //Impede o envio do formulário
 
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;

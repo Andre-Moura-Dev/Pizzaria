@@ -33,3 +33,7 @@ h1 {
     font-size: 0.9em;
     display: none;
 }
+
+button.btn.btn-primary {
+    background-color: orange;
+}

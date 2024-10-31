@@ -37,11 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
             valid = false;
         }
 
-        if(!valid == true) {
-            window.location.href = ("/Paginas/login.html");
+        if(valid == true) {
+            location.pathname = ('/Paginas/login.html');
         }
 
-        else if(!valid == true) {
+        else if(valid == false) {
             event.preventDefault(); //Impede o envio do formulário
         }
     });
