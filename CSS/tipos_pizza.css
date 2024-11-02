@@ -1,24 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .pizzas {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    height: 400px;
-    width: 100%;
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza os itens em coluna */
+    height: 100vh; /* Ocupa a altura total da tela */
+}
+
+main {
+    display: flex; /* Ativa o Flexbox dentro de main */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza os itens em coluna */
+    text-align: center; /* Centraliza o texto */
+}
+
+.image-container {
+    display: flex; /* Ativa o Flexbox para a imagem */
+    justify-content: center; /* Centraliza a imagem */
+    margin-top: 20px; /* Espaçamento acima da imagem */
+    margin-bottom: 30px;
 }
 
 img {
-    width: 100%;
+    width: 400px;
     height: 300px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    border: none;
+    border-radius: 5px;
 }
 
 h2 {
-    text-align: center;
+    font-size: 30px;
     color: black;
-    text-decoration: none;
+}
+
+ol {
+    list-style-type: none;
+    text-align: left;
 }
