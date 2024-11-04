@@ -55,6 +55,7 @@ header {
 
 h1 {
     font-size: 32px; /* Tamanho da fonte do título */
+    text-decoration: none;
 }
 
 .header-col-button {
