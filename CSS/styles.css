@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: red; /* Cor de fundo suave */
+    background-color: #f0f0f0; /* Cor de fundo suave */
     display: flex;
     flex-direction: column; /* Alinha os filhos em coluna */
     min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da janela */
@@ -19,9 +19,9 @@ header {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center; /* Alinhamento para espaçamento */
-    align-items: center;
-    padding: 0 20px; /* Espaçamento lateral */
+    justify-content: flex-end; /* Alinhamento para espaçamento */
+    align-items: flex-end;
+    padding: 20px; /* Espaçamento lateral */
     color: white;
 }
 
@@ -29,6 +29,8 @@ header {
     background-color: lightgray;
     padding: 10px 0;
     text-align: center;
+    max-width: 100%;
+    height: 100%;
 }
 
 .nav-bar ul {
@@ -55,35 +57,27 @@ h1 {
     font-size: 32px; /* Tamanho da fonte do título */
 }
 
-.header-col {
+.header-col-button {
     display: flex;
     justify-content: space-between; /* Adicionado para espaçar os itens */
     align-items: center; /* Alinha verticalmente */
-    width: 100%; /* Garante que ocupa toda a largura */
-    height: 30%;
+    max-width: 100%; /* Garante que ocupa toda a largura */
+    max-height: 100%;
 }
 
-.header-col-button {
-    display: flex;
-    gap: 10px; /* Espaçamento entre os botões */
-}
-
-.header-col-button button {
+.header-col-button button a {
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    color: white;
-}
-
-.header-col-button a {
+    height: 100%;
     text-decoration: none;
-    color: white;
 }
 
 .header-col h1 {
     margin: 0; /* Remove a margem do título */
+    text-align: center;
 }
 
 
@@ -103,6 +97,8 @@ h1 {
 
 .carousel {
     margin-bottom: 20px; /* Espaçamento entre o carrossel e os cards */
+    border: none;
+    border-radius: 5px;
 }
 
 footer {
@@ -202,8 +198,12 @@ footer.dark {
 /* Responsividade */
 @media (max-width: 768px) {
     header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         flex-direction: column; /* Muda a direção para coluna em telas menores */
-        height: auto; /* Altura automática */
+        height: 100%; /* Altura automática */
+        width: auto;
     }
 
     .header-col-button {
@@ -211,7 +211,9 @@ footer.dark {
         gap: 5px;
     }
 
-    .side-bar {
-        width: 100%; /* Barra lateral ocupa toda a largura em telas pequenas */
+    .header-col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
