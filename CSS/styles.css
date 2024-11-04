@@ -1,104 +1,49 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: red; /* Cor de fundo suave */
+    display: flex;
+    flex-direction: column; /* Alinha os filhos em coluna */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da janela */
 }
 
 .container {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    flex: 1; /* Faz com que o container principal ocupe o espaço disponível */
 }
 
 header {
-   background-color: orange;
-   border-radius: 5px;
-   width: 100%;
-   height: 80px;
-   /* margin: 10px 300px; */
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   color: white; 
-}
-
-h2 {
-    color: white;
-    font-size: 30px;
-}
-
-.header-col {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.header-col-button {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 5px;
-}
-
-.header-col-button a {
-    text-decoration: none;
-    color: white;
-}
-
-main {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: row;
+    background-color: #ff7f50; /* Coral */
+    border-radius: 5px;
     width: 100%;
-    height: 800px;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Alinhamento para espaçamento */
+    align-items: center;
+    padding: 0 20px; /* Espaçamento lateral */
+    color: white;
 }
 
-.side-bar {
+.nav-bar {
     background-color: lightgray;
-    color: white;
+    padding: 10px 0;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 0; /* Inicia com largura 0 */
-    overflow: hidden; /* Esconde o conteúdo que excede a largura */
-    height: 100%;
-    transition: width 0.5s ease; /* Transição suave */
 }
 
-.side-bar.open {
-    width: 20vw; /* Largura total quando aberta */
-}
-
-.side-bar ul {
+.nav-bar ul {
     list-style-type: none;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
+    margin: 10px;
 }
 
-.side-bar ul li {
-    margin-bottom: 15px;
-    margin-top: 15px;
+.nav-bar ul li {
+    display: inline;
+    grid-template-columns: auto auto;
 }
 
-.side-bar a {
+.nav-bar ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
     margin: 0 15px;
     font-size: 1.1em;
     border: none;
@@ -106,32 +51,78 @@ main {
     padding: 4px;
 }
 
+h1 {
+    font-size: 32px; /* Tamanho da fonte do título */
+}
+
+.header-col {
+    display: flex;
+    justify-content: space-between; /* Adicionado para espaçar os itens */
+    align-items: center; /* Alinha verticalmente */
+    width: 100%; /* Garante que ocupa toda a largura */
+    height: 30%;
+}
+
+.header-col-button {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.header-col-button button {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    color: white;
+}
+
+.header-col-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-col h1 {
+    margin: 0; /* Remove a margem do título */
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column; /* Coloca a barra de navegação e o conteúdo em coluna */
+    flex: 1; /* Faz com que a div content ocupe o espaço restante */
+}
+
+.carousel, .nav-bar {
+    margin-bottom: 30px;
+}
+
+.nav-bar, header {
+    margin-bottom: 30px;
+}
+
+.carousel {
+    margin-bottom: 20px; /* Espaçamento entre o carrossel e os cards */
+}
+
 footer {
-    background-color: gray;
+    background-color: #333;
     color: white;
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: auto;
-    height: 50px;
-    margin-top: 100px;
     text-align: center;
 }
 
 footer .theme button {
-    background-color: orange;
-    color: white; /* Cor do texto do botão */
-    border: none; /* Remove a borda padrão */
-    padding: 0.5rem 1rem; /* Espaçamento interno do botão */
-    font-size: 17px; /* Tamanho da fonte */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+    background-color: #ff7f50; /* Cor do botão do tema */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button {
-    background-color: orange;
-    color: #fff;
     border: none;
     padding: 0.5rem 1rem;
     font-size: 16px;
@@ -139,17 +130,41 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    opacity: 0.7;
-    background-color: red;
+button a {
+    text-decoration: none;
+}
+
+/* Estilos para o Carrossel */
+.carousel-inner img {
+    width: 100%;
+    height: 400px; /* Ajuste a altura conforme necessário */
+}
+
+/* Estilos para os Cards */
+.card {
+    margin-bottom: 20px; /* Espaçamento entre os cards */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.card img {
+    height: 200px; /* Ajuste a altura das imagens dos cards */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    border-top-left-radius: 10px; /* Bordas arredondadas no topo */
+    border-top-right-radius: 10px; /* Bordas arredondadas no topo */
+}
+
+.card-title {
+    font-weight: bold;
+    color: #ff4500; /* Cor do título */
+}
+
+.card-text {
+    color: #555; /* Cor do texto dos cards */
 }
 
 body.dark {
     background-color: #333;
-}
-
-.side-bar.dark {
-    background-color: #444;
 }
 
 header.dark {
@@ -158,4 +173,45 @@ header.dark {
 
 footer.dark {
     background-color: #222;
+}
+
+.toggle-content {
+    margin-top: 10px; /* Espaço acima do botão */
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Cor do texto branco */
+    border: none; /* Sem borda */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mão ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave na cor de fundo */
+}
+
+.toggle-content:hover {
+    background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+.extra-content {
+    margin-top: 10px; /* Espaço acima do conteúdo extra */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    border: 1px solid #ddd; /* Borda leve */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Muda a direção para coluna em telas menores */
+        height: auto; /* Altura automática */
+    }
+
+    .header-col-button {
+        flex-direction: column; /* Botões em coluna */
+        gap: 5px;
+    }
+
+    .side-bar {
+        width: 100%; /* Barra lateral ocupa toda a largura em telas pequenas */
+    }
 }
