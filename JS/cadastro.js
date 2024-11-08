@@ -37,8 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
             valid = false;
         }
 
+
+        //Verificar se os dados de cadastro estão corretos
         if(valid == true) {
-            location.pathname = ('/Paginas/login.html');
+            location.href = ('/Paginas/login.html');
         }
 
         else if(valid == false) {

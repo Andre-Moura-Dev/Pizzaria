@@ -1,219 +1,249 @@
-body {
+/* Reset básico de estilos */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Cor de fundo suave */
-    display: flex;
-    flex-direction: column; /* Alinha os filhos em coluna */
-    min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da janela */
+    box-sizing: border-box;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    flex: 1; /* Faz com que o container principal ocupe o espaço disponível */
+/* Estilo geral da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #f0f0f0;
+    line-height: 1.6;
+    padding-top: 70px; /* Para dar espaçamento ao cabeçalho fixo */
 }
 
+/* Cabeçalho */
 header {
-    background-color: #ff7f50; /* Coral */
-    border-radius: 5px;
+    background-color: orange;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
     width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     display: flex;
-    justify-content: flex-end; /* Alinhamento para espaçamento */
-    align-items: flex-end;
-    padding: 20px; /* Espaçamento lateral */
-    color: white;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
 }
 
+/* Div Cabeçalho */
+header .header-col h1 {
+    font-size: 2rem;
+    margin-left: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header .header-col-button button {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header .header-col-button button a {
+    color: white;
+    text-decoration: none;
+}
+
+header .header-col-button button:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+}
+
+/* Barra de navegação */
 .nav-bar {
-    background-color: lightgray;
-    padding: 10px 0;
+    background-color: orange;
+    color: white;
+    padding: 15px 0;
+    margin-bottom: 20px;
     text-align: center;
-    max-width: 100%;
-    height: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 80px; /* Para não cobrir o conteúdo devido ao header fixo */
 }
 
 .nav-bar ul {
     list-style-type: none;
-    margin: 10px;
-}
-
-.nav-bar ul li {
-    display: inline;
-    grid-template-columns: auto auto;
-}
-
-.nav-bar ul li a {
-    text-decoration: none;
-    color: black;
-    margin: 0 15px;
-    font-size: 1.1em;
-    border: none;
-    border-radius: 5px;
-    padding: 4px;
-}
-
-h1 {
-    font-size: 32px; /* Tamanho da fonte do título */
-}
-
-.header-col-button {
     display: flex;
-    justify-content: space-between; /* Adicionado para espaçar os itens */
-    align-items: center; /* Alinha verticalmente */
-    max-width: 100%; /* Garante que ocupa toda a largura */
-    max-height: 100%;
+    justify-content: center;
+    padding: 0;
 }
 
-.header-col-button button a {
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
+.nav-bar li {
+    margin: 0 20px;
+}
+
+.nav-bar a {
     text-decoration: none;
-}
-
-.header-col h1 {
-    margin: 0; /* Remove a margem do título */
-    text-align: center;
-}
-
-
-.content {
-    display: flex;
-    flex-direction: column; /* Coloca a barra de navegação e o conteúdo em coluna */
-    flex: 1; /* Faz com que a div content ocupe o espaço restante */
-}
-
-.carousel, .nav-bar {
-    margin-bottom: 30px;
-}
-
-.nav-bar, header {
-    margin-bottom: 30px;
-}
-
-.carousel {
-    margin-bottom: 20px; /* Espaçamento entre o carrossel e os cards */
-    border: none;
-    border-radius: 5px;
-}
-
-footer {
-    background-color: #333;
     color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-bar a:hover {
+    text-decoration: none;
+    color: orange;
+}
+
+/* Carrossel */
+.carousel-inner img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Cards */
+.card {
+    margin: 15px 0;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.card-body {
+    background-color: #fff;
     padding: 20px;
     text-align: center;
 }
 
-footer .theme button {
-    background-color: #ff7f50; /* Cor do botão do tema */
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 17px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button {
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button a {
-    text-decoration: none;
-}
-
-/* Estilos para o Carrossel */
-.carousel-inner img {
-    width: 100%;
-    height: 400px; /* Ajuste a altura conforme necessário */
-}
-
-/* Estilos para os Cards */
-.card {
-    margin-bottom: 20px; /* Espaçamento entre os cards */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
-}
-
-.card img {
-    height: 200px; /* Ajuste a altura das imagens dos cards */
-    object-fit: cover; /* Mantém a proporção da imagem */
-    border-top-left-radius: 10px; /* Bordas arredondadas no topo */
-    border-top-right-radius: 10px; /* Bordas arredondadas no topo */
-}
-
 .card-title {
-    font-weight: bold;
-    color: #ff4500; /* Cor do título */
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .card-text {
-    color: #555; /* Cor do texto dos cards */
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
 }
 
-body.dark {
-    background-color: #333;
+.card .btn {
+    margin-top: 10px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-header.dark {
-    background-color: #555;
+.card .btn-primary {
+    background-color: orange;
+    border: none;
+    color: white;
 }
 
-footer.dark {
-    background-color: #222;
+.card .btn-secondary {
+    background-color: #28a745;
+    border: none;
+    color: white;
 }
 
-.toggle-content {
-    margin-top: 10px; /* Espaço acima do botão */
-    background-color: #007bff; /* Cor de fundo azul */
-    color: white; /* Cor do texto branco */
-    border: none; /* Sem borda */
-    padding: 10px 15px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Mão ao passar o mouse */
-    transition: background-color 0.3s; /* Transição suave na cor de fundo */
-}
-
-.toggle-content:hover {
-    background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
+.card .btn-primary:hover, .card .btn-secondary:hover {
+    background-color: orange;
+    transform: scale(1.05);
 }
 
 .extra-content {
-    margin-top: 10px; /* Espaço acima do conteúdo extra */
-    padding: 10px; /* Espaçamento interno */
-    background-color: #f8f9fa; /* Cor de fundo suave */
-    border: 1px solid #ddd; /* Borda leve */
-    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 10px;
+    text-align: left;
 }
 
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
 
-/* Responsividade */
-@media (max-width: 768px) {
-    header {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column; /* Muda a direção para coluna em telas menores */
-        height: 100%; /* Altura automática */
-        width: auto;
-    }
+footer p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
 
-    .header-col-button {
-        flex-direction: column; /* Botões em coluna */
-        gap: 5px;
-    }
+footer .theme {
+    margin-top: 15px;
+}
 
-    .header-col {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+footer #toggleTheme {
+    padding: 12px 20px;
+    background-color: orange;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Tema escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .nav-bar {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .card {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .card-body {
+    background-color: #444;
+}
+
+body.dark-mode .card-title {
+    color: #ff7f50;
+}
+
+body.dark-mode .card-text {
+    color: #bbb;
+}
+
+body.dark-mode .extra-content {
+    color: #ccc;
 }

@@ -1,11 +1,27 @@
-//Alternar Tema Claro e Escuro
-const themeButton = document.getElementById('toggleTheme');
+// Recupera o botão de alternância de tema
+const toggleThemeButton = document.getElementById('toggleTheme');
 
-themeButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    document.querySelector('header').classList.toggle('dark');
-    document.querySelector('footer').classList.toggle('dark');
+// Verifica se o tema preferido está salvo no localStorage
+const savedTheme = localStorage.getItem('theme');
+
+// Se o tema salvo for "dark", aplica o tema escuro
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+
+// Função para alternar entre tema claro e escuro
+toggleThemeButton.addEventListener('click', () => {
+    // Alterna a classe dark-mode no body
+    document.body.classList.toggle('dark-mode');
+
+    // Salva a preferência do tema no localStorage
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
 });
+
 
 //Abrir e fechar as informações dos cards
 document.addEventListener('DOMContentLoaded', function() {
