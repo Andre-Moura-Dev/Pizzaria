@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.querySelectorAll('.error').forEach(el => el.style.display = 'none');
 
+        //Limpar as mensagens de erro
+        document.querySelectorAll('.error').forEach(el => el.remove());
+
         if (!emailInput.value) {
             showError(emailInput, "Email é obrigatório");
             valid = false;
@@ -40,11 +43,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
         //Verificar se os dados de cadastro estão corretos
         if(valid == true) {
+
             window.location.href = '/Paginas/login.html';
+
+            window.location.href = ('/Paginas/login.html');
+            be344357704f080df0d7eb94cb6401b426de24bc
         }
 
-        else if(valid == false) {
-            event.preventDefault(); //Impede o envio do formulário
+        else {
+            event.preventDefault();
         }
     });
 
