@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<!-- Container -->
 <div class="container">
     <header>
         <div class="header-col"></div>
@@ -16,9 +17,11 @@
         <div class="header-col-button">
             <button type="submit"><a href="/Paginas/login.html">Login</a></button>
             <button type="submit"><a href="/Paginas/cadastro.html">Cadastro</a></button>
+            <button type="submit"><a href="/Paginas/carrinho.html">Carrinho</a></button>
         </div>
     </header>
 
+    <!-- Conteudo Principal da página HOME-->
     <div class="content">
         <nav class="nav-bar">
             <ul>
@@ -42,6 +45,15 @@
                 <div class="carousel-item">
                     <img src="/img/pizza3.jpg" class="d-block w-100" alt="Pizza 3">
                 </div>
+                <div class="carousel-item">
+                    <img src="/img/Pizza4.jpg" class="d-block w-100" alt="Pizza 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/Pizza5.jpg" class="d-block w-100" alt="Pizza 5">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/Pizza6.jpg" class="d-block w-100" alt="Pizza 6">
+                </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -53,18 +65,16 @@
             </a>
         </div>
 
+        <h1>Cards Com pizzas</h1>
+
         <!-- Cards -->
         <div class="row mt-4">
             <div class="col-md-4">
                 <div class="card">
                     <img src="/img/pizza1.jpg" class="card-img-top" alt="Card 1">
                     <div class="card-body">
-                        <h5 class="card-title">Pizza Peperoni</h5>
+                        <h5 class="card-title">Pizza Margherita</h5>
                         <p class="card-text">Deliciosa pizza de tomate, mussarela e manjericão.</p>
-                        <button class="btn btn-secondary toggle-content">Mostrar/Esconder Detalhes</button>
-                        <div class="extra-content" style="display: none;">
-                            <p>Uma pizza super deliciosa para voce aproveitar com sua família</p>
-                        </div>
                         <a href="/Paginas/carrinho.html" class="btn btn-primary">Peça agora</a>
                     </div>
                 </div>
@@ -73,13 +83,9 @@
                 <div class="card">
                     <img src="/img/pizza2.jpeg" class="card-img-top" alt="Card 2">
                     <div class="card-body">
-                        <h5 class="card-title">Pizza Margherita</h5>
-                        <p class="card-text">Tradicional pizza com fatias de pepperoni, molho de tomate e manjericão</p>
-                        <button class="btn btn-secondary toggle-content">Mostrar/Esconder Detalhes</button>
-                        <div class="extra-content" style="display: none;">
-                            <p>Uma ótima combinação de tomate com queijo, que deixará voçe com água na boca</p>
-                        </div>
-                        <a href="#" class="btn btn-primary">Peça agora</a>
+                        <h5 class="card-title">Pizza Pepperoni</h5>
+                        <p class="card-text">Tradicional pizza com fatias de pepperoni.</p>
+                        <a href="/Paginas/carrinho.html" class="btn btn-primary">Peça agora</a>
                     </div>
                 </div>
             </div>
@@ -88,12 +94,38 @@
                     <img src="/img/pizza3.jpg" class="card-img-top" alt="Card 3">
                     <div class="card-body">
                         <h5 class="card-title">Pizza de Calabresa</h5>
-                        <p class="card-text">Uma combinação deliciosa de Calabresas.</p>
-                        <button class="btn btn-secondary toggle-content">Mostrar/Esconder Detalhes</button>
-                        <div class="extra-content" style="display: none;">
-                            <p>Detalhes adicionais sobre a Pizza Margherita.</p>
-                        </div>
-                        <a href="#" class="btn btn-primary">Peça agora</a>
+                        <p class="card-text">Uma deliciosa combinação de calabresa e queijo que voçê adorára!</p>
+                        <a href="/Paginas/carrinho.html" class="btn btn-primary">Peça agora</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/img/Pizza4.jpg" class="card-img-top" alt="Card 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza Doce de Chocolate com morango</h5>
+                        <p class="card-text">Uma combinação deliciosa de chocolate com morango para voçê provar, delícia de combinação de massa com chocolate!</p>
+                        <a href="/Paginas/carrinho.html" class="btn btn-primary">Peça agora</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/img/Pizza5.jpg" class="card-img-top" alt="Card 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza de chocolate com sorvete</h5>
+                        <p class="card-text">Uma combinação deliciosa de chocolate com sorvete para voçê experementar!</p>
+                        <a href="/Paginas/carrinho.html" class="btn btn-primary">Peça agora</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/img/Pizza6.jpg" class="card-img-top" alt="Card 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza de banana com canela</h5>
+                        <p class="card-text">Uma combinação deliciosa de banana com canela, diferente porém deliciosa!</p>
+                        <a href="/Paginas/carrinho.html" class="btn btn-primary">Peça agora</a>
                     </div>
                 </div>
             </div>
@@ -112,5 +144,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="/JS/script.js"></script>
+<script src="/JS/carrinho.js"></script>
 </body>
 </html>

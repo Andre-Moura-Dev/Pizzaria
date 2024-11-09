@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Pizzaria</title>
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="stylesheet" href="/CSS/carrinho.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Container -->
+<div class="container">
+    <header class="d-flex justify-content-between align-items-center py-3">
+        <h1>Pizzaria - Carrinho de Compras</h1>
+        <div class="header-col-button">
+            <button type="submit"><a href="/Paginas/login.html">Login</a></button>
+            <button type="submit"><a href="/Paginas/cadastro.html">Cadastro</a></button>
+            <button type="submit"><a href="/Paginas/carrinho.html">Carrinho</a></button>
+            
+        </div>
+    </header>
+
+    <!-- Carrinho de Compras -->
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Itens no Carrinho</h3>
+            <div class="list-group">
+                <!-- Item 1 -->
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-1">Pizza Margherita</h5>
+                        <p class="mb-1">Deliciosa pizza de tomate, mussarela e manjericão!</p>
+                    </div>
+                    <div>
+                        <span class="badge badge-primary badge-pill">R$ 29,99</span>
+                        <input type="number" class="form-control form-control-sm" value="1" style="width: 60px;" min="1" id="quantidade-1">
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-1">Pizza Pepperoni</h5>
+                        <p class="mb-1">Tradicional pizza com fatias de pepperoni!</p>
+                    </div>
+                    <div>
+                        <span class="badge badge-primary badge-pill">R$ 34,99</span>
+                        <input type="number" class="form-control form-control-sm" value="1" style="width: 60px;" min="1" id="quantidade-2">
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-1">Pizza Doce de Chocolate com Morango</h5>
+                        <p class="mb-1">Uma combinação deliciosa de chocolate com morango!</p>
+                    </div>
+                    <div>
+                        <span class="badge badge-primary badge-pill">R$ 39,99</span>
+                        <input type="number" class="form-control form-control-sm" value="1" style="width: 60px;" min="1" id="quantidade-3">
+                    </div>
+                </div>
+
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-1">Pizza Doce de banana com canela</h5>
+                        <p class="mb-1">Uma pizza diferente de banana com canela, diferente, mais saborosa!</p>
+                    </div>
+                    <div>
+                        <span class="badge badge-primary badge-pill">R$ 40,99</span>
+                        <input type="number" class="form-control form-control-sm" value="1" style="width: 60px;" min="1" id="quantidade-3">
+                    </div>
+                </div>
+
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-1">Pizza Doce de Chocolate com sorvete</h5>
+                        <p class="mb-1">Uma pizza saborosa de chocolate com sorvete, muito deliciosa!</p>
+                    </div>
+                    <div>
+                        <span class="badge badge-primary badge-pill">R$ 39,99</span>
+                        <input type="number" class="form-control form-control-sm" value="1" style="width: 60px;" min="1" id="quantidade-3">
+                    </div>
+                </div>
+
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-1">Pizza de calabresa</h5>
+                        <p class="mb-1">Uma pizza saborosa de calabresa com quiejo para voçê se deliciar!</p>
+                    </div>
+                    <div>
+                        <span class="badge badge-primary badge-pill">R$ 23,99</span>
+                        <input type="number" class="form-control form-control-sm" value="1" style="width: 60px;" min="1" id="quantidade-3">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Resumo do Carrinho -->
+        <div class="col-md-4">
+            <h3>Resumo do Carrinho</h3>
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Total de Itens:
+                    <span class="badge badge-secondary badge-pill" id="total-itens">3</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Subtotal:
+                    <span class="badge badge-success badge-pill" id="subtotal">R$ 104,97</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Frete:
+                    <span class="badge badge-warning badge-pill" id="frete">R$ 10,00</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Total:
+                    <span class="badge badge-danger badge-pill" id="total">R$ 114,97</span>
+                </li>
+            </ul>
+            <button class="btn btn-success btn-block mt-4" id="finalizar-compra"><a href="/index.html"></a>Finalizar Compra</button>
+            <button class="btn btn-secondary btn-block mt-2" id="continuar-comprando"><a href="/Paginas/carrinho.html"></a>Continuar Comprando</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; Pizzaria 2024 - DF</p>
+    <div class="theme">
+        <button id="toggleTheme">Mudar Tema</button>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/JS/script.js"></script>
+<script src="/JS/carrinho.js"></script>
+</body>
+</html>

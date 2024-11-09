@@ -27,6 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-size: 1.2rem;
 }
@@ -94,7 +95,7 @@ header .header-col-button button:hover {
 
 .nav-bar a:hover {
     text-decoration: none;
-    color: orange;
+    color: red;
 }
 
 /* Carrossel */
@@ -104,6 +105,13 @@ header .header-col-button button:hover {
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Cards */

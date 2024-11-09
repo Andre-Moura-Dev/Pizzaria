@@ -1,0 +1,129 @@
+/* Definindo o estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+/* Estilo do header */
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilo do carrinho e itens */
+.row {
+    margin-top: 20px;
+}
+
+.list-group-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item h5 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.list-group-item p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.list-group-item .badge {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+}
+
+.list-group-item input[type="number"] {
+    width: 80px;
+    padding: 0.25rem;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+/* Estilo da coluna do resumo */
+.col-md-4 {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+}
+
+.list-group-item {
+    font-size: 1.1rem;
+    padding: 10px;
+}
+
+.list-group-item .badge {
+    font-size: 1.1rem;
+}
+
+/* Botões */
+button {
+    font-size: 1.2rem;
+    padding: 10px 15px;
+}
+
+button#finalizar-compra {
+    background-color: orange;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+button#continuar-comprando {
+    background-color: darkorange;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .col-md-8, .col-md-4 {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .list-group-item {
+        font-size: 0.95rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}

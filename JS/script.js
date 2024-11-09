@@ -42,3 +42,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    //Obtém todos os elementos com a classe 'card-price'
+    const prices = document.querySelectorAll('.card-price');
+
+    //Define o comportamento de clique no botão "Peça agora"
+    const buttons = document.querySelectorAll('.btn-primary');
+
+    buttons.forEach(function(button, index) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // Impede o link de redirecionar para a página de carrinho
+
+            const price = prices[index].getAttribute('data-preco');
+            alert(`O preço da pizza é: R$ ${price}`);
+        });
+    });
+});
