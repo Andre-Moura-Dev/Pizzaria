@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = '/Paginas/login.html';
 
             window.location.href = ('/Paginas/login.html');
-            be344357704f080df0d7eb94cb6401b426de24bc
         }
 
         else {
