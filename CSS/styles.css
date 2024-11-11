@@ -32,6 +32,12 @@ header {
     font-size: 1.2rem;
 }
 
+h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+}
+
 /* Div Cabeçalho */
 header .header-col h1 {
     font-size: 2rem;
@@ -67,7 +73,7 @@ header .header-col-button button:hover {
 .nav-bar {
     background-color: orange;
     color: white;
-    padding: 15px 0;
+    padding: 15px;
     margin-bottom: 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -91,6 +97,7 @@ header .header-col-button button:hover {
     font-size: 1.1rem;
     font-weight: 500;
     transition: color 0.3s ease, text-decoration 0.3s ease;
+    margin-top: 20px;
 }
 
 .nav-bar a:hover {
