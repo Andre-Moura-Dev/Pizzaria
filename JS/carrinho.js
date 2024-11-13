@@ -6,11 +6,11 @@ function atualizarCarrinho() {
 
     // Pega os inputs de quantidade
     const quantities = [
-        document.getElementById('quantidade-1').value,
-        document.getElementById('quantidade-2').value,
-        document.getElementById('quantidade-3').value
+        document.getElementById('quantidade-1') ? document.getElementById('quantidade-1').value : 0,
+        document.getElementById('quantidade-2') ? document.getElementById('quantidade-2').value : 0,
+        document.getElementById('quantidade-3') ? document.getElementById('quantidade-3').value : 0
     ];
-
+    
     // Calcula total de itens e subtotal
     quantities.forEach((quantity, index) => {
         totalItems += parseInt(quantity);

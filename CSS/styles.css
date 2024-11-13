@@ -82,9 +82,12 @@ header .header-col-button button:hover {
 
 .nav-bar ul {
     list-style-type: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
+    padding: 10px;
+}
+
+.nav-bar ul li {
+    display: inline-flex;
+    grid-template-columns: auto auto;
 }
 
 .nav-bar li {
