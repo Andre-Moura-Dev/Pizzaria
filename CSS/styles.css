@@ -69,6 +69,15 @@ header .header-col-button button:hover {
     transform: scale(1.05);
 }
 
+a.btn.btn-primary {
+    background-color: darkorange;
+    border: 1px solid darkorange;
+}
+
+a.btn.btn-primary:hover  {
+    transform: scale(1.05);
+}
+
 /* Barra de navegação */
 .nav-bar {
     background-color: orange;
@@ -77,7 +86,7 @@ header .header-col-button button:hover {
     margin-bottom: 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 80px; /* Para não cobrir o conteúdo devido ao header fixo */
+    margin-top: 110px; /* Para não cobrir o conteúdo devido ao header fixo */
 }
 
 .nav-bar ul {
@@ -106,6 +115,15 @@ header .header-col-button button:hover {
 .nav-bar a:hover {
     text-decoration: none;
     color: red;
+}
+
+.titlePizzas {
+    font-size: 30px;
+    font-weight: 400;
+    margin: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: end;
 }
 
 /* Carrossel */

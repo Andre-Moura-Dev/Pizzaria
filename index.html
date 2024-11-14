@@ -6,6 +6,8 @@
     <title>Pizzaria</title>
     <link rel="stylesheet" href="/CSS/styles.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -17,7 +19,10 @@
         <div class="header-col-button">
             <button type="submit"><a href="/Paginas/login.html">Login</a></button>
             <button type="submit"><a href="/Paginas/cadastro.html">Cadastro</a></button>
-            <button type="submit"><a href="/Paginas/carrinho.html">Carrinho</a></button>
+            <a href="/Paginas/carrinho.html" class="btn btn-primary p-3 rounded-circle d-flex align-items-center justify-content-center">
+                <i class="bi bi-cart2 text-white" style="font-size: 1.5rem;"></i>
+                Carrinho
+            </a>
         </div>
     </header>
 
@@ -32,6 +37,10 @@
                 <li><a href="/Paginas/tipos_pizza.html">TIPOS DE PIZZAS</a></li>
             </ul>
         </nav>
+
+        <div class="titlePizzas">
+            <h2>Seja Bem vindo a nossa Pizzaria, aqui voçê encontrará as melhores pizzas com os melhores preços, e os melhores sabores.</h2>
+        </div>
 
         <!-- Carousel -->
         <div id="carouselExample" class="carousel slide" data-ride="carousel">
