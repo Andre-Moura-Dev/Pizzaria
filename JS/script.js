@@ -23,25 +23,7 @@ toggleThemeButton.addEventListener('click', () => {
 });
 
 
-//Abrir e fechar as informações dos cards
-document.addEventListener('DOMContentLoaded', function() {
-    // Seleciona todos os botões de toggle
-    const toggleButtons = document.querySelectorAll('.toggle-content');
 
-    toggleButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Seleciona o conteúdo extra associado ao botão clicado
-            const extraContent = button.nextElementSibling;
-
-            // Alterna a visibilidade
-            if (extraContent.style.display === 'none' || extraContent.style.display === '') {
-                extraContent.style.display = 'block';
-            } else {
-                extraContent.style.display = 'none';
-            }
-        });
-    });
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     //Obtém todos os elementos com a classe 'card-price'

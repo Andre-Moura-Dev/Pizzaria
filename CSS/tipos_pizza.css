@@ -12,3 +12,16 @@
     padding: 10px;
     text-transform: uppercase;
 }
+
+/* Estilo dos preços das pizzas */
+.card-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;  /* Cor inicial */
+    transition: transform 0.5s ease, color 0.3s ease; /* Transição suave */
+}
+
+/* Pode adicionar mais estilos, como hover, se necessário */
+.card-price:hover {
+    cursor: pointer;  /* Muda o cursor quando o usuário passar por cima do preço */
+}

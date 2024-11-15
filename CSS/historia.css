@@ -7,3 +7,12 @@
     font-size: 30px;
     color: black;
 }
+
+button.btn.btn-info {
+    background-color: orange;
+    border: 1px solid orange;
+}
+
+button.btn.btn-info:hover {
+    background-color: darkorange;
+}

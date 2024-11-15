@@ -1,48 +1,62 @@
-// Função para atualizar o carrinho
-function atualizarCarrinho() {
-    const prices = [29.99, 34.99, 39.99]; // Preços das pizzas
-    let totalItems = 0;
-    let subtotal = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    // Preços das pizzas no carrinho (id das pizzas e seus preços)
+    const precos = {
+        'quantidade-1': 29.99, // Pizza Margherita
+        'quantidade-2': 34.99, // Pizza Pepperoni
+        'quantidade-3': 39.99, // Pizza Doce de Chocolate com Morango
+        'quantidade-4': 40.99, // Pizza Doce de banana com canela
+        'quantidade-5': 39.99, // Pizza Doce de Chocolate com sorvete
+        'quantidade-6': 23.99, // Pizza de Calabresa
+    };
 
-    // Pega os inputs de quantidade
-    const quantities = [
-        document.getElementById('quantidade-1') ? document.getElementById('quantidade-1').value : 0,
-        document.getElementById('quantidade-2') ? document.getElementById('quantidade-2').value : 0,
-        document.getElementById('quantidade-3') ? document.getElementById('quantidade-3').value : 0
-    ];
-    
-    // Calcula total de itens e subtotal
-    quantities.forEach((quantity, index) => {
-        totalItems += parseInt(quantity);
-        subtotal += parseInt(quantity) * prices[index];
+    // Seletores
+    const quantidadeInputs = document.querySelectorAll('input[type="number"]');
+    const totalItens = document.getElementById('total-itens');
+    const subtotalSpan = document.getElementById('subtotal');
+    const freteSpan = document.getElementById('frete');
+    const totalSpan = document.getElementById('total');
+
+    // Função para calcular os totais
+    function atualizarCarrinho() {
+        let total = 0;
+        let itemsCount = 0;
+        
+        // Calcula o subtotal e total de itens com base na quantidade
+        quantidadeInputs.forEach(input => {
+            const id = input.id;
+            const quantidade = parseInt(input.value);
+            const preco = precos[id];
+
+            // Se a quantidade for maior que 0, conta como item
+            if (quantidade > 0) {
+                total += preco * quantidade;
+                itemsCount += quantidade;
+            }
+        });
+
+        // Atualiza o total de itens
+        totalItens.textContent = itemsCount;
+
+        // Atualiza o subtotal
+        subtotalSpan.textContent = `R$ ${total.toFixed(2)}`;
+
+        // Adiciona o frete fixo
+        const frete = 10.00; // frete fixo para simplificação
+        freteSpan.textContent = `R$ ${frete.toFixed(2)}`;
+
+        // Atualiza o total (Subtotal + Frete)
+        const totalFinal = total + frete;
+        totalSpan.textContent = `R$ ${totalFinal.toFixed(2)}`;
+    }
+
+    // Atualizar os totais quando a quantidade for alterada
+    quantidadeInputs.forEach(input => {
+        // Inicia com valor 0 em vez de 1
+        input.value = 0;
+
+        input.addEventListener('input', atualizarCarrinho);
     });
 
-    // Atualiza o total de itens e o subtotal
-    document.getElementById('total-itens').textContent = totalItems;
-    document.getElementById('subtotal').textContent = `R$ ${subtotal.toFixed(2)}`;
-
-    // Calcula o total (incluindo frete fixo de R$ 10,00)
-    const frete = 10.00;
-    const total = subtotal + frete;
-    document.getElementById('frete').textContent = `R$ ${frete.toFixed(2)}`;
-    document.getElementById('total').textContent = `R$ ${total.toFixed(2)}`;
-}
-
-// Atualizar o carrinho sempre que a quantidade mudar
-document.querySelectorAll('input[type="number"]').forEach(input => {
-    input.addEventListener('input', atualizarCarrinho);
-});
-
-// Chama a função de atualização ao carregar a página
-document.addEventListener('DOMContentLoaded', atualizarCarrinho);
-
-// Ações dos botões
-document.getElementById('finalizar-compra').addEventListener('click', () => {
-    alert('Finalizando compra!');
-
-    window.location.href = '/index.html'; // Redireciona para a página index.html
-});
-
-document.getElementById('continuar-comprando').addEventListener('click', () => {
-    window.location.href = '/Paginas/carrinho.html'; // Redireciona para a página carrinho.html
+    // Inicializa a exibição do carrinho ao carregar a página
+    atualizarCarrinho();
 });
