@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const genderInputs = document.querySelectorAll('input[name="sexo"]');
 
     form.addEventListener('submit', function(event) {
-        let valid = true; //Verifica se valid é igual a true
+        let valid = true; //Atribui um valor booleano a variável "valid"
 
         document.querySelectorAll('.error').forEach(el => el.style.display = 'none');
 
@@ -44,13 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
         //Verificar se os dados de cadastro estão corretos
         if(valid == true) {
 
-            window.location.href = '/Paginas/login.html';
+            // window.location.href = '/Paginas/login.html';
 
             window.location.href = ('/Paginas/login.html');
         }
 
         else {
-            event.preventDefault();
+            event.preventDefault(); //Impede o envio do formulário
         }
     });
 
