@@ -59,36 +59,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializa a exibição do carrinho ao carregar a página
     atualizarCarrinho();
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+    // Remover Itens do Carrinho
     const removeButtons = document.querySelectorAll('.remove-item');
 
     removeButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const itemID = button.getAttribute('data-item-id');
+            // Remover o item da lista
+            const itemElement = button.closest('.list-group-item');
+            itemElement.remove();
 
-            button.closest('.list-group-item').remove();
-
-            updateCartTotal();
-        }); 
-    });
-
-    function updateCartTotal() {
-        const items = document.querySelector('.badge-primary');
-        let total = 0;
-        let itemCount = 0;
-
-        items.forEach(item => {
-            const priceElement = item.querySelector('.badge-primary');
-            const quantityElement = item.querySelector('input[type="number"]');
-            const price = parseFloat(priceElement.textContent.replace('R$', ''));
-            const quantity = parseInt(quantityElement.value);
-            total += price * quantity;
-            itemCount++;
+            // Após a remoção, recalcular o carrinho
+            atualizarCarrinho();
         });
-
-        document.getElementById('total-itens').textContent = itemCount;
-        document.getElementById('subtotal').textContent = `R$ ${total.toFixed(2)}`;
-    }
+    });
 });

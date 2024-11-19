@@ -43,9 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         //Verificar se os dados de cadastro estão corretos
         if(valid == true) {
-
-            // window.location.href = '/Paginas/login.html';
-
             window.location.href = ('/Paginas/login.html');
         }
 

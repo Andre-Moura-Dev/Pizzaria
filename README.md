@@ -20,6 +20,18 @@ finalizar a compra das pizzas. Agora as últimas funções que faltam é impleme
 
 -> Lógica implementada para que quando clicar no preço dos cards com as pizzas, aparecerá uma cor verde informando o preço da pizza.
 
+# Arquivos JS
+
+-> Cada arquivo .js deste projeto tem sua função específica, desde cadastrar usuários, funções para comprar, remover e adicionar itens ao carrinho, mudar a cor de fundo das páginas, verficação de erros de login, consistência dos dados e etc.
+
+# Arquivos CSS
+
+-> Corresponde a cada estilização das páginas de acordo com o que está definido no html.
+
+# Arquivos HTML
+
+-> Corresponde as interfaces por meio das quais os usuários iram interagir com cada uma das páginas.
+
 Desenvolvi parte deste site utilizando:
 
 -> HTML5 <br>
