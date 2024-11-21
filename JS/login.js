@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         //Se login e senha está errado, é direcionado para login.html
         else {
-            alert("Voçe não é o Administrador do site.");
+            alert("Voçê não é o Admnistrador deste site, login ou senha incorretos!");
             location.href = ('/Paginas/login.html');
         }
     });

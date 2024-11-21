@@ -41,3 +41,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.getElementById('togllePizzas').addEventListener('click', function () {
+    const PizzasDiv = document.getElementById('titlePizzas');
+
+    //Alternar a visibilidade da Div "Título"
+    if(PizzasDiv.style.display === 'none' || PizzasDiv.style.display === '') {
+        PizzasDiv.style.display = 'block';
+        this.textContent = 'Ocultar Título';
+    }
+    else {
+        PizzasDiv.style.display = 'none';
+        this.textContent = 'Mostrar Título';
+    }
+});

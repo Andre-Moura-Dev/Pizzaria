@@ -124,6 +124,20 @@ a.btn.btn-primary:hover  {
     margin: 5px;
     margin-top: 10px;
     margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button.btn.btn-info {
+    background-color: orange;
+    border: 1px solid orange;
+    margin-bottom: 20px;
+}
+
+button.btn.btn-info:hover {
+    background-color: darkorange;
 }
 
 /* Carrossel */

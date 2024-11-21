@@ -43,11 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         //Verificar se os dados de cadastro estão corretos
         if(valid == true) {
-            window.location.href = ('/Paginas/login.html');
-        }
-
-        else {
-            event.preventDefault(); //Impede o envio do formulário
+            window.location.replace = ('/Paginas/login.html');
         }
     });
 
