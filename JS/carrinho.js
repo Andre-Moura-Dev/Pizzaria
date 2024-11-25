@@ -76,3 +76,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+//Listener para finalizar compra
+document.addEventListener('DOMContentLoaded', () => {
+    const finalizarCompraButton = document.getElementById('finalizar-compra');
+    //alert("Finalizando Compra!");
+
+    finalizarCompraButton.addEventListener('click', () => {
+        window.location.href = ('/index.html');
+    });
+});
+
+//Listener para continuar a compra
+document.addEventListener('DOMContentLoaded', () => {
+    const continuarCompraButton = document.getElementById('continuar-comprando');
+    
+    continuarCompraButton.addEventListener('click', () => {
+        window.location.href = ('/Paginas/carrinho.html');
+    });
+})

@@ -24,7 +24,6 @@ toggleThemeButton.addEventListener('click', () => {
 
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
     //Obtém todos os elementos com a classe 'card-price'
     const prices = document.querySelectorAll('.card-price');
