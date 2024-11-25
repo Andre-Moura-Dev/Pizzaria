@@ -61,13 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
     atualizarCarrinho();
 
     // Remover Itens do Carrinho
-    const removeButtons = document.querySelectorAll('.remove-item');
+    const removeButtons = document.querySelectorAll('.remove.item');
 
     removeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remover o item da lista
+        button.addEventListener('click', (event) => {
+            // Encontrar o botão de remoção
             const itemElement = button.closest('.list-group-item');
-            itemElement.remove();
+            if (itemElement) {
+                itemElement.remove();
+            }
 
             // Após a remoção, recalcular o carrinho
             atualizarCarrinho();
